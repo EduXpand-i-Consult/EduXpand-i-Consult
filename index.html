@@ -9,20 +9,20 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #fff; /* Main background color */
             color: #333;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
         header {
-            background-color: #276221;
+            background: linear-gradient(135deg, #101820 0%, #FEE715 100%);
             color: #fff;
             padding: 20px;
             text-align: center;
         }
         nav {
-            background-color: #333;
+            background-color: #5DA2D5;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -45,29 +45,54 @@
             max-width: 1200px;
             margin: auto;
         }
+        .hero {
+            background: linear-gradient(135deg, #F3D250 0%, #903CCF4 50%, #5DA2D5 100%);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3); /* Dark overlay for text visibility */
+            border-radius: 8px;
+            z-index: 1;
+        }
+        .hero h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.5em;
+        }
+        .hero p {
+            position: relative;
+            z-index: 2;
+            font-size: 1.2em;
+        }
         section {
             margin-bottom: 40px;
         }
-        h2 {
-            color: #276221;
-            border-bottom: 2px solid #276221;
-            padding-bottom: 10px;
-        }
         .service {
-            background-color: #fff;
-            border-radius: 5px;
+            background-color: #F3D250;
+            border-radius: 8px;
             margin: 20px 0;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .service:hover {
             transform: translateY(-5px);
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
         }
         .service h3 {
             margin-top: 0;
-            color: #276221;
+            color: #903CCF4;
         }
         .service p {
             margin: 10px 0;
@@ -83,7 +108,7 @@
             margin: 5px 0;
         }
         footer {
-            background-color: #276221;
+            background: linear-gradient(135deg, #101820 0%, #FEE715 100%);
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -105,29 +130,29 @@
     </nav>
     
     <div class="container" id="home">
-        <section id="welcome">
-            <h2>Welcome</h2>
-            <p>We are delighted to have you here! Explore our diverse range of services designed to cater to your unique needs. Whether you're planning to study abroad, require visa interview assistance, or need help with programming tutorials, we are here to support you every step of the way.</p>
+        <section class="hero">
+            <h1>Welcome to Multiservice Hub</h1>
+            <p>Your one-stop solution for study, travel, and professional services.</p>
         </section>
 
         <section id="about">
             <h2>About Us</h2>
-            <p>Welcome to the Multiservice Hub, your one-stop solution for a variety of services ranging from study and travel consultations to coding tutorials and STEM mentoring for young girls. Our goal is to provide expert assistance and guidance to help you achieve your goals efficiently and effectively.</p>
+            <p>Welcome to the Multiservice Hub, your comprehensive resource for various services including study abroad consultation, visa assistance, and coding tutorials. Our mission is to offer expert guidance to help you navigate through your educational and professional journey with ease.</p>
         </section>
         
         <section id="services">
             <h2>Services</h2>
             <div class="service">
                 <h3>Study & Travel Abroad Consultation</h3>
-                <p>Expert guidance for studying and traveling abroad, including assistance with applications and travel plans.</p>
+                <p>Expert advice on studying and traveling abroad, including application and travel assistance.</p>
             </div>
             <div class="service">
                 <h3>Visa Interview Assistance</h3>
-                <p>Preparation and tips for visa interviews to help you succeed and secure your visa.</p>
+                <p>Preparation and guidance for visa interviews to increase your chances of success.</p>
             </div>
             <div class="service">
                 <h3>Accommodation Help</h3>
-                <p>Assistance in finding suitable accommodation for your stay abroad.</p>
+                <p>Assistance in securing suitable accommodation for your stay abroad.</p>
             </div>
             <div class="service">
                 <h3>Residence Permit & Blocked Account Renewal</h3>
@@ -135,19 +160,19 @@
             </div>
             <div class="service">
                 <h3>Programming Tutorials & Academic Support</h3>
-                <p>Programming tutorials, help with university coding assignments, and scientific writing assistance in LaTeX.</p>
+                <p>Help with programming tutorials, university assignments, and scientific writing in LaTeX.</p>
             </div>
             <div class="service">
                 <h3>Girls Coding & STEM Mentoring</h3>
-                <p>Mentoring young girls aged 10+ in coding and STEM fields to foster interest and skills in technology.</p>
+                <p>Mentoring for young girls (10+) in coding and STEM fields to encourage skills development.</p>
             </div>
             <div class="service">
                 <h3>Graphic Design & YouTube Video Editing</h3>
-                <p>Professional graphic design services and video editing for YouTube content creators.</p>
+                <p>Professional graphic design services and video editing for content creators.</p>
             </div>
             <div class="service">
                 <h3>Conferences</h3>
-                <p>Organization and management of conferences to share knowledge and network with professionals.</p>
+                <p>Organization and management of conferences to share knowledge and network with industry professionals.</p>
             </div>
         </section>
 
@@ -163,7 +188,7 @@
 
         <section id="youtube">
             <h2>YouTube</h2>
-            <p>Check out our YouTube channel for more content and updates:</p>
+            <p>Visit our YouTube channel for more content and updates:</p>
             <a href="https://youtube.com/@lyric_lenses?si=DCw4PTQ5XeTe39rI" target="_blank">Lyric Lenses YouTube Channel</a>
         </section>
         
@@ -174,7 +199,7 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>For inquiries, please contact us at <a href="mailto:info@example.com">info@example.com</a>.</p>
+            <p>For inquiries, please email us at <a href="mailto:info@example.com">info@example.com</a>.</p>
         </section>
     </div>
     
