@@ -39,34 +39,15 @@
         nav a:hover {
             text-decoration: underline;
         }
-        .container {
-            flex: 1;
-            padding: 20px;
-            max-width: 1200px;
-            margin: auto;
-            background: linear-gradient(to bottom, #F3D250 0%, #fff 50%); /* Gradient effect */
-            border: 1px solid #F3D250; /* Color separation */
-        }
         .hero {
-            background: linear-gradient(135deg, #F3D250 0%, #903CCF4 50%, #5DA2D5 100%);
+            background: #000; /* Black background for the hero section */
             color: #fff;
             padding: 60px 20px;
             text-align: center;
             border-radius: 8px;
             margin-bottom: 40px;
-            position: relative;
-            z-index: 1;
-        }
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3); /* Dark overlay for text visibility */
-            border-radius: 8px;
-            z-index: -1;
+            width: 100%; /* Ensure it spans the full width */
+            box-sizing: border-box;
         }
         .hero h1 {
             font-size: 2.5em;
@@ -74,6 +55,14 @@
         }
         .hero p {
             font-size: 1.2em;
+        }
+        .container {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background: linear-gradient(to bottom, #F3D250 0%, #fff 50%); /* Gradient effect */
+            border: 1px solid #F3D250; /* Color separation */
         }
         section {
             margin-bottom: 40px;
@@ -129,12 +118,12 @@
         <a href="#contact">Contact</a>
     </nav>
     
-    <div class="container" id="home">
-        <section class="hero">
-            <h1>Welcome to Multiservice Hub</h1>
-            <p>Your one-stop solution for study, travel, and professional services.</p>
-        </section>
+    <div class="hero" id="home">
+        <h1>Welcome to Multiservice Hub</h1>
+        <p>Your one-stop solution for study, travel, and professional services.</p>
+    </div>
 
+    <div class="container">
         <section id="about">
             <h2>About Us</h2>
             <p>Welcome to the Multiservice Hub, your comprehensive resource for various services including study abroad consultation, visa assistance, and coding tutorials. Our mission is to offer expert guidance to help you navigate through your educational and professional journey with ease.</p>
