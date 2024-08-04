@@ -22,7 +22,7 @@
             text-align: center;
         }
         nav {
-            background-color: #5DA2D5;
+            background-color: #000; /* Black background for navigation */
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -44,6 +44,8 @@
             padding: 20px;
             max-width: 1200px;
             margin: auto;
+            background: linear-gradient(to bottom, #F3D250 0%, #fff 50%); /* Gradient effect */
+            border: 1px solid #F3D250; /* Color separation */
         }
         .hero {
             background: linear-gradient(135deg, #F3D250 0%, #903CCF4 50%, #5DA2D5 100%);
@@ -53,6 +55,7 @@
             border-radius: 8px;
             margin-bottom: 40px;
             position: relative;
+            z-index: 1;
         }
         .hero::before {
             content: "";
@@ -63,16 +66,13 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.3); /* Dark overlay for text visibility */
             border-radius: 8px;
-            z-index: 1;
+            z-index: -1;
         }
         .hero h1 {
-            position: relative;
-            z-index: 2;
             font-size: 2.5em;
+            margin: 0;
         }
         .hero p {
-            position: relative;
-            z-index: 2;
             font-size: 1.2em;
         }
         section {
