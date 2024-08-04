@@ -3,115 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌟 Multiservice Hub ⭐️</title>
+    <title>Multiservice Hub</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
-            background-color: #333;
+            background-color: #276221;
             color: #fff;
-            padding: 15px 0;
+            padding: 20px;
             text-align: center;
         }
         nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
             color: #fff;
+            margin: 0 15px;
             text-decoration: none;
-            padding: 10px 20px;
-            display: block;
+            font-weight: bold;
         }
         nav a:hover {
-            background-color: #555;
+            text-decoration: underline;
         }
         .container {
-            width: 80%;
-            margin: auto;
+            flex: 1;
             padding: 20px;
+            max-width: 1200px;
+            margin: auto;
         }
-        h1, h2 {
+        section {
+            margin-bottom: 40px;
+        }
+        h2 {
             color: #276221;
+            border-bottom: 2px solid #276221;
+            padding-bottom: 10px;
         }
-        .services {
+        .service {
             background-color: #fff;
-            border-radius: 8px;
+            border-radius: 5px;
+            margin: 20px 0;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .services ul {
-            list-style-type: none;
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        .service h3 {
+            margin-top: 0;
+            color: #276221;
+        }
+        .service p {
+            margin: 10px 0;
+        }
+        .service ul {
+            list-style: none;
             padding: 0;
         }
-        .services li {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-        .fees {
-            margin-top: 20px;
-            font-size: 18px;
+        .service ul li {
+            background: url('checkmark.png') left center no-repeat;
+            background-size: 16px;
+            padding-left: 24px;
+            margin: 5px 0;
         }
         footer {
-            background-color: #333;
+            background-color: #276221;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            padding: 20px;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>🌟 Multiservice Hub ⭐️</h1>
+        <h1>Multiservice Hub</h1>
     </header>
-
+    
     <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
         <a href="#services">Services</a>
-        <a href="#fees">Fees</a>
-        <a href="#youtube">YouTube</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
     </nav>
+    
+    <div class="container" id="home">
+        <section id="welcome">
+            <h2>Welcome</h2>
+            <p>We are delighted to have you here! Explore our diverse range of services designed to cater to your unique needs. Whether you're planning to study abroad, require visa interview assistance, or need help with programming tutorials, we are here to support you every step of the way.</p>
+        </section>
 
-    <div class="container">
-        <section id="services" class="services">
-            <h2>💼 Services</h2>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Welcome to the Multiservice Hub, your one-stop solution for a variety of services ranging from study and travel consultations to coding tutorials and STEM mentoring for young girls. Our goal is to provide expert assistance and guidance to help you achieve your goals efficiently and effectively.</p>
+        </section>
+        
+        <section id="services">
+            <h2>Services</h2>
+            <div class="service">
+                <h3>Study & Travel Abroad Consultation</h3>
+                <p>Expert guidance for studying and traveling abroad, including assistance with applications and travel plans.</p>
+            </div>
+            <div class="service">
+                <h3>Visa Interview Assistance</h3>
+                <p>Preparation and tips for visa interviews to help you succeed and secure your visa.</p>
+            </div>
+            <div class="service">
+                <h3>Accommodation Help</h3>
+                <p>Assistance in finding suitable accommodation for your stay abroad.</p>
+            </div>
+            <div class="service">
+                <h3>Residence Permit & Blocked Account Renewal</h3>
+                <p>Support with renewing residence permits and managing blocked accounts for international students.</p>
+            </div>
+            <div class="service">
+                <h3>Programming Tutorials & Academic Support</h3>
+                <p>Programming tutorials, help with university coding assignments, and scientific writing assistance in LaTeX.</p>
+            </div>
+            <div class="service">
+                <h3>Girls Coding & STEM Mentoring</h3>
+                <p>Mentoring young girls aged 10+ in coding and STEM fields to foster interest and skills in technology.</p>
+            </div>
+            <div class="service">
+                <h3>Graphic Design & YouTube Video Editing</h3>
+                <p>Professional graphic design services and video editing for YouTube content creators.</p>
+            </div>
+            <div class="service">
+                <h3>Conferences</h3>
+                <p>Organization and management of conferences to share knowledge and network with professionals.</p>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <h2>Pricing</h2>
+            <p>Fees:</p>
             <ul>
-                <li>Study📚 & Travel ✈️ abroad consult: 🇩🇪🇺🇸 🇪🇺</li>
-                <li>ℹ️ Visa Interview Assistance</li>
-                <li>🏠 Accommodation Help</li>
-                <li>🛂 Residence Permit & Blocked Account Renewal</li>
-                <li>💻 Programming tutorials, uni-coding assignments, scientific writing in LaTeX for thesis, seminars.</li>
-                <li>👧🏽‍💻 Girls (10yrs+) Coding & STEM Mentoring</li>
-                <li>Graphic Design & YouTube video editing</li>
-                <li>Conferences</li>
+                <li>USA / EU: $10 / €10 per hour</li>
+                <li>Ghana: 100 GHS per hour</li>
+                <li>Nigeria: 10,130 Naira per hour</li>
             </ul>
         </section>
 
-        <section id="fees">
-            <h2>💰 Fees</h2>
-            <p>🇺🇸 / 🇪🇺: $10/ €10 per hour</p>
-            <p>🇬🇭: 100 GHS/hr</p>
-            <p>🇳🇬: 10,130 Naira/hr</p>
+        <section id="youtube">
+            <h2>YouTube</h2>
+            <p>Check out our YouTube channel for more content and updates:</p>
+            <a href="https://youtube.com/@lyric_lenses?si=DCw4PTQ5XeTe39rI" target="_blank">Lyric Lenses YouTube Channel</a>
+        </section>
+        
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p>Client testimonials will be added here.</p>
         </section>
 
-        <section id="youtube">
-            <h2>🔗 YouTube</h2>
-            <p>Check out our YouTube channel for more insights and tutorials:</p>
-            <a href="https://youtube.com/@lyric_lenses?si=DCw4PTQ5XeTe39rI" target="_blank">YouTube Channel</a>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>For inquiries, please contact us at <a href="mailto:info@example.com">info@example.com</a>.</p>
         </section>
     </div>
-
+    
     <footer>
-        <p>© 2024 Multiservice Hub. All rights reserved.</p>
+        <p>© 2024 Bathsheba Darko. All rights reserved.</p>
     </footer>
 </body>
 </html>
